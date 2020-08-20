@@ -1,0 +1,131 @@
+@import 'utilities';
+
+// Navigation
+#navigation {
+  padding-top: .5rem;
+  border: 2px solid #000;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .logo {
+      color: #000;
+      font-size: 1.2rem;
+
+      span {
+        color: #fff;
+        background: #000;
+        padding: .5rem;
+      }
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      li {
+        padding-right: 1rem;
+
+        a {
+          color: #000;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// Showcase 
+#showcase {
+  background: url('../images/showcase-img.jpg') no-repeat center center/cover;
+  height: 60vh;
+
+  .container {
+    height: 100%;
+
+    .showcase-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      h1 {
+        font-size: 3.6rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+        padding-bottom: 1rem;
+      }
+
+      a {
+        // border: 1px solid #000;
+        background: $red-color;
+        color: #fff;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        transition: 1s all ease;
+
+        &:hover {
+          background: #990000;
+        }
+      }
+    }
+  }
+}
+
+// Section A 
+#section-a {
+  padding: 2rem 0;
+
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+
+    .section-title {
+      font-size: 2rem;
+      padding-bottom: 1rem;
+    }
+
+    .section-underline {
+      background: #000;
+      height: 2px;
+      width: 50px;
+    }
+  }
+
+  .container {
+    .section-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+
+      .content-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+
+      .content-text {
+        font-size: 1.1rem;
+        line-height: 1.1;
+
+        span {
+          font-size: 1.3rem;
+          color: $red-color;
+        }
+      }
+    }
+  }
+}

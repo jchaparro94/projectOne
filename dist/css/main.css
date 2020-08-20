@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto; }
+
+#navigation {
+  padding-top: .5rem;
+  border: 2px solid #000; }
+  #navigation .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    #navigation .container .logo {
+      color: #000;
+      font-size: 1.2rem; }
+      #navigation .container .logo span {
+        color: #fff;
+        background: #000;
+        padding: .5rem; }
+    #navigation .container .main-nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center; }
+      #navigation .container .main-nav li {
+        padding-right: 1rem; }
+        #navigation .container .main-nav li a {
+          color: #000;
+          font-size: 1rem; }
+
+#showcase {
+  background: url("../images/showcase-img.jpg") no-repeat center center/cover;
+  height: 60vh; }
+  #showcase .container {
+    height: 100%; }
+    #showcase .container .showcase-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start; }
+      #showcase .container .showcase-content h1 {
+        font-size: 3.6rem; }
+      #showcase .container .showcase-content p {
+        font-size: 1.4rem;
+        padding-bottom: 1rem; }
+      #showcase .container .showcase-content a {
+        background: #cc0000;
+        color: #fff;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        transition: 1s all ease; }
+        #showcase .container .showcase-content a:hover {
+          background: #990000; }
+
+#section-a {
+  padding: 2rem 0; }
+  #section-a .section-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem; }
+    #section-a .section-header .section-title {
+      font-size: 2rem;
+      padding-bottom: 1rem; }
+    #section-a .section-header .section-underline {
+      background: #000;
+      height: 2px;
+      width: 50px; }
+  #section-a .container .section-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem; }
+    #section-a .container .section-content .content-image {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #section-a .container .section-content .content-image img {
+        border-radius: 50%; }
+    #section-a .container .section-content .content-text {
+      font-size: 1.1rem;
+      line-height: 1.1; }
+      #section-a .container .section-content .content-text span {
+        font-size: 1.3rem;
+        color: #cc0000; }
