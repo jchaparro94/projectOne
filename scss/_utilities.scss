@@ -1,4 +1,25 @@
+// Variables
 $red-color: #cc0000;
+
+// Mixins
+@mixin section-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+@mixin section-title {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+@mixin section-underline {
+  background: #000;
+  height: 2px;
+  width: 50px;
+}
 
 // Basic Styling 
 * {

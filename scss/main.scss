@@ -3,7 +3,8 @@
 // Navigation
 #navigation {
   padding-top: .5rem;
-  border: 2px solid #000;
+  border-bottom: 2px solid #000;
+  height: 5vh;
 
   .container {
     display: grid;
@@ -11,7 +12,7 @@
 
     .logo {
       color: #000;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
 
       span {
         color: #fff;
@@ -30,7 +31,11 @@
 
         a {
           color: #000;
-          font-size: 1rem;
+          font-size: 1.3rem;
+
+          &:hover {
+            color: $red-color;
+          }
         }
       }
     }
@@ -83,21 +88,14 @@
   padding: 2rem 0;
 
   .section-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 2rem;
+    @include section-header;
 
     .section-title {
-      font-size: 2rem;
-      padding-bottom: 1rem;
+      @include section-title;
     }
 
     .section-underline {
-      background: #000;
-      height: 2px;
-      width: 50px;
+      @include section-underline;
     }
   }
 
@@ -118,12 +116,90 @@
       }
 
       .content-text {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         line-height: 1.1;
 
         span {
           font-size: 1.3rem;
           color: $red-color;
+        }
+      }
+    }
+  }
+}
+
+// Section B 
+#section-b {
+  padding: 2rem 0;
+
+  .section-header {
+    @include section-header;
+
+    .section-title {
+      @include section-title;
+    }
+
+    .section-underline {
+      @include section-underline;
+    }
+  }
+
+  .container {
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+
+      .plan {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        border: 1px solid #000;
+        border-radius: 5px;
+        width: 300px;
+        height: 500px;
+        box-shadow: 5px 10px 18px #888888;
+
+        .plan-header {
+          background: #c0c6cc;
+          color: #000;
+          font-size: 1.2rem;
+          padding: 1rem 3rem;
+          text-align: center;
+        }
+
+        .plan-body {
+          text-align: center;
+
+          .price {
+            padding: 2rem;
+            font-size: 1.3rem;
+
+          }
+
+          ul {
+            li {
+              padding: 1rem;
+              font-size: 1.1rem;
+
+              i {
+                padding-right: 5px;
+              }
+
+              &:last-child {
+                padding-bottom: 2rem;
+              }
+            }
+          }
+
+          .btn-price {
+            display: block;
+            padding: .5rem 1rem;
+            background: $red-color;
+            color: #fff;
+            margin: 0 1rem;
+          }
         }
       }
     }

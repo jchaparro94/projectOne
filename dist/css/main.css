@@ -16,13 +16,14 @@ ul {
 
 #navigation {
   padding-top: .5rem;
-  border: 2px solid #000; }
+  border-bottom: 2px solid #000;
+  height: 5vh; }
   #navigation .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
     #navigation .container .logo {
       color: #000;
-      font-size: 1.2rem; }
+      font-size: 1.5rem; }
       #navigation .container .logo span {
         color: #fff;
         background: #000;
@@ -35,7 +36,9 @@ ul {
         padding-right: 1rem; }
         #navigation .container .main-nav li a {
           color: #000;
-          font-size: 1rem; }
+          font-size: 1.3rem; }
+          #navigation .container .main-nav li a:hover {
+            color: #cc0000; }
 
 #showcase {
   background: url("../images/showcase-img.jpg") no-repeat center center/cover;
@@ -89,8 +92,61 @@ ul {
       #section-a .container .section-content .content-image img {
         border-radius: 50%; }
     #section-a .container .section-content .content-text {
-      font-size: 1.1rem;
+      font-size: 1.5rem;
       line-height: 1.1; }
       #section-a .container .section-content .content-text span {
         font-size: 1.3rem;
         color: #cc0000; }
+
+#section-b {
+  padding: 2rem 0; }
+  #section-b .section-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem; }
+    #section-b .section-header .section-title {
+      font-size: 2rem;
+      padding-bottom: 1rem; }
+    #section-b .section-header .section-underline {
+      background: #000;
+      height: 2px;
+      width: 50px; }
+  #section-b .container .plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem; }
+    #section-b .container .plans .plan {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #000;
+      border-radius: 5px;
+      width: 300px;
+      height: 500px;
+      box-shadow: 5px 10px 18px #888888; }
+      #section-b .container .plans .plan .plan-header {
+        background: #c0c6cc;
+        color: #000;
+        font-size: 1.2rem;
+        padding: 1rem 3rem;
+        text-align: center; }
+      #section-b .container .plans .plan .plan-body {
+        text-align: center; }
+        #section-b .container .plans .plan .plan-body .price {
+          padding: 2rem;
+          font-size: 1.3rem; }
+        #section-b .container .plans .plan .plan-body ul li {
+          padding: 1rem;
+          font-size: 1.1rem; }
+          #section-b .container .plans .plan .plan-body ul li i {
+            padding-right: 5px; }
+          #section-b .container .plans .plan .plan-body ul li:last-child {
+            padding-bottom: 2rem; }
+        #section-b .container .plans .plan .plan-body .btn-price {
+          display: block;
+          padding: .5rem 1rem;
+          background: #cc0000;
+          color: #fff;
+          margin: 0 1rem; }
