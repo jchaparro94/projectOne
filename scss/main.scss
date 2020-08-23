@@ -1,18 +1,29 @@
 @import 'utilities';
 
 // Navigation
-#navigation {
+.navigation {
   padding-top: .5rem;
-  border-bottom: 2px solid #000;
-  height: 5vh;
+  height: 8vh;
+  position: fixed;
+  width: 100%;
+
+  &.solid {
+    background: #fff;
+    border-bottom: 2px solid #000;
+  }
 
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    height: 100%;
 
     .logo {
       color: #000;
       font-size: 1.5rem;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
 
       span {
         color: #fff;
@@ -45,7 +56,7 @@
 // Showcase 
 #showcase {
   background: url('../images/showcase-img.jpg') no-repeat center center/cover;
-  height: 60vh;
+  height: 90vh;
 
   .container {
     height: 100%;
@@ -67,7 +78,6 @@
       }
 
       a {
-        // border: 1px solid #000;
         background: $red-color;
         color: #fff;
         padding: 1rem 2rem;
@@ -85,7 +95,7 @@
 
 // Section A 
 #section-a {
-  padding: 2rem 0;
+  padding-top: 2rem;
 
   .section-header {
     @include section-header;
@@ -100,10 +110,12 @@
   }
 
   .container {
-    .section-content {
+
+    .section-content-top {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 1rem;
+      padding-bottom: 1rem;
 
       .content-image {
         display: flex;
@@ -126,11 +138,60 @@
       }
     }
   }
+
+  .section-content-bottom {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/section-content-bottom.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    // padding: 1rem 0;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+
+      .content {
+        color: #fff;
+        text-align: center;
+
+        i {
+          font-size: 6rem;
+          padding-bottom: 1rem;
+        }
+
+        .fa-html5 {
+          color: #e44d26;
+        }
+
+        .fa-sass {
+          color: #c46496;
+        }
+
+        .fa-js {
+          color: #dcb92a;
+        }
+
+        h2 {
+          padding-bottom: 1rem;
+          letter-spacing: 1px;
+
+        }
+
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
 }
 
 // Section B 
 #section-b {
   padding: 2rem 0;
+  background: #f7f7f7;
 
   .section-header {
     @include section-header;
@@ -160,6 +221,10 @@
         width: 300px;
         height: 500px;
         box-shadow: 5px 10px 18px #888888;
+
+        &:nth-child(2) {
+          height: 550px;
+        }
 
         .plan-header {
           background: #c0c6cc;
@@ -199,9 +264,116 @@
             background: $red-color;
             color: #fff;
             margin: 0 1rem;
+            transition: 1s all ease;
+
+            &:hover {
+              background: #990000;
+            }
           }
         }
       }
     }
+  }
+}
+
+// Section C 
+#section-c {
+  padding: 2rem 0;
+  height: 500px;
+  background: #efefef;
+
+  .section-header {
+    @include section-header;
+
+    .section-title {
+      @include section-title;
+    }
+
+    .section-underline {
+      @include section-underline;
+    }
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      p {
+        padding-bottom: 1rem;
+      }
+
+      .socials {
+        a {
+          color: #000;
+
+          i {
+            font-size: 1.3rem;
+            padding-right: .3rem;
+          }
+        }
+      }
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 1.4rem;
+        padding-bottom: .5rem;
+      }
+
+      input[type='text'] {
+        height: 30px;
+        padding-left: .5rem;
+        font-size: 1rem;
+
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      textarea {
+        height: 150px;
+        padding-top: 1rem;
+        padding-left: .5rem;
+        font-size: 1rem;
+
+
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      input[type='submit'] {
+        margin-top: 1rem;
+        padding: .5rem 1rem;
+        font-size: 1.3rem;
+        background: $red-color;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Footer 
+#main-footer {
+  height: 50px;
+  background: #000;
+  color: #fff;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 }
